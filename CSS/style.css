@@ -246,6 +246,16 @@ ul a li{
     transition: .3s all ease-in-out;
     background-color: #2CBC5C;
 }
+#datacamp:hover{
+    transform: translateX(-40%);
+    transition: .3s all ease-in-out;
+    background-color: #33aacc;
+}
+#kaggle:hover{
+    transform: translateX(-40%);
+    transition: .3s all ease-in-out;
+    background-color: #20beff;
+}
 
 #git:hover{
     transform: translateX(-40%);
