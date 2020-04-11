@@ -8,12 +8,29 @@ body{
     overflow: hidden;
 }
 
+.preloader{
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 3;
+    background-color: #000;
+}
+
+.preloader img{
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
 .outer-wrapper{
     position: absolute;
     top:0;
     left:0;
     width:100%;
-    height:100vh;
+    height:100%;
     background: url(../images/bg.png);
     background-color:#000;
     background-size:cover;
@@ -58,7 +75,7 @@ body{
     color:yellow;
     position: absolute;
     top:.1rem;
-    right:90px;
+    right:152px;
     display:block;
     text-align: left;
     transform: translateY(0);
@@ -164,9 +181,29 @@ body{
     overflow: hidden;
 }
 
+.about-me{
+    padding:1.2rem 0;
+    line-height: 1.8;
+}
+
+.more-text{
+    display: none;
+}
+
+#read-more{
+    color:yellow;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+}
+
+.open{
+    display: inline;
+}
+
 .info{
     font-size:1.45rem;
-    margin:3rem 0 0 0;
+    margin:0;
 }
 
 ul{
@@ -189,6 +226,10 @@ ul a li{
     font-size:1rem;
     font-weight:bold;
     letter-spacing: 2px;
+}
+
+.mob-icon{
+    display: none;
 }
 
 .side-icon{
@@ -263,13 +304,43 @@ ul a li{
     background-color: #00405d;
 }
 
+@media screen and (max-width: 1024px){
+
+   body{
+       overflow: hidden;
+   }
+
+   .side-icon{
+       display: none;
+   }
+
+   .mob-icon{
+    position: relative;
+    top:0;
+    right:0;
+    display:flex;
+    justify-content: center;
+    margin:0;
+    padding:0;
+    z-index:10;
+}
+
+.down{
+    position: absolute;
+    top:.1rem;
+    right:24px;
+}
+
+}
+
+
 
 @media screen and (max-width: 768px){
 
     body{
         width:100vw;
         height:100%;
-        overflow: hidden;
+        overflow: auto;
     }
     .side-icon{
         display: none;
@@ -306,9 +377,6 @@ ul a li{
         margin:.8rem 0 0 0;
     }
     .outer-wrapper{
-        position: absolute;
-        top:0;
-        left:0;
         width:100%;
         height:100%;
         background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/bg.png);
@@ -320,11 +388,8 @@ ul a li{
     }
 
     .wrapper{
-        width:100vw;
+        width:100%;
         height:100%;
-        position: absolute;
-        top:0;
-        left:0;
         z-index: 1;
         opacity: .75;
     }
@@ -340,12 +405,23 @@ ul a li{
     .down{
         display: none;
     }
+
+    .mob-l{
+        display: none;
+    }
     .down-mob{
         opacity:1;
         margin-top:.7rem;
         color:yellow;
         text-transform: uppercase;
         display: block;
+    }
+
+    .about-me{
+        padding:.7rem 0;
+        line-height: 1.6;
+        font-size:.85rem;
+        width: 100%;
     }
 
 
